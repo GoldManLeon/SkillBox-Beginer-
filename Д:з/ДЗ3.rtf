@@ -1,0 +1,240 @@
+{\rtf1\ansi\ansicpg1251\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c0\c1\c1;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 2. \uc0\u1044 \u1072 , \u1092 \u1091 \u1085 \u1082 \u1094 \u1080 \u1103  \u1084 \u1086 \u1078 \u1077 \u1090  \u1074 \u1099 \u1079 \u1074 \u1072 \u1090 \u1100  \u1076 \u1088 \u1091 \u1075 \u1091 \u1102  \u1092 \u1091 \u1085 \u1082 \u1094 \u1080 \u1102 .\
+\
+
+\f1\b \cf2 \cb3 func
+\f2\b0  findMinMax3(
+\f1\b _
+\f2\b0  array: Int...) -> (min: Int, max: Int)\{\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+\cf2     
+\f1\b func
+\f2\b0  findMin() -> Int\{\
+        
+\f1\b var
+\f2\b0  minimumValue = array[0]\
+        
+\f1\b for
+\f2\b0  v 
+\f1\b in
+\f2\b0  array\{\
+            
+\f1\b if
+\f2\b0  v < minimumValue \{ minimumValue = v \}\
+        \}\
+        
+\f1\b return
+\f2\b0  minimumValue\
+    \}\
+    
+\f1\b func
+\f2\b0  findMax() -> Int\{\
+        
+\f1\b var
+\f2\b0  maximumValue = array[0]\
+        
+\f1\b for
+\f2\b0  v 
+\f1\b in
+\f2\b0  array\{\
+            
+\f1\b if
+\f2\b0  v > maximumValue \{ maximumValue = v \}\
+        \}\
+        
+\f1\b return
+\f2\b0  maximumValue\
+    \}\
+    
+\f1\b return
+\f2\b0  (findMin(), findMax())\
+\}\
+
+\f1\b \
+
+\f2\b0 3.  
+\f1\b \cf4 func
+\f2\b0 \cf4  Sport(
+\f1\b \cf4 _
+\f2\b0 \cf4  array: [String]) -> String\{\
+\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1\b \cf4 var
+\f2\b0 \cf4  games = ""\
+\
+    
+\f1\b \cf4 for
+\f2\b0 \cf4  el 
+\f1\b \cf4 in
+\f2\b0 \cf4  array \{\
+\
+games += el + ","\
+\
+\}\
+\
+
+\f1\b \cf4 return
+\f2\b0 \cf4  games\
+\
+\}\
+\
+Sport(["Box, Tennis, Football"])
+\f1\b \cf2 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f2\b0 \cf2 \
+4. 
+\f1\b func
+\f2\b0  swapValue(a: 
+\f1\b inout
+\f2\b0  Int, b: 
+\f1\b inout
+\f2\b0  Int)\{\
+    
+\f1\b let
+\f2\b0  c = a\
+    a = b * 2\
+    b = c * 2\
+\}\
+\
+
+\f1\b var
+\f2\b0  a = 7\
+
+\f1\b var
+\f2\b0  b = 8\
+\
+swapValue(a: &a, b: &b)\
+print(a, b)\
+
+\f1\b \
+
+\f2\b0 \
+5.
+\fs26  
+\f1\b\fs24 func
+\f2\b0  trueOrFalse(a: [Int], b: [Int]) -> Bool\{\
+    
+\f1\b var
+\f2\b0  sumA = 0\
+    
+\f1\b var
+\f2\b0  sumB = 0\
+    \
+    
+\f1\b for
+\f2\b0  el 
+\f1\b in
+\f2\b0  a \{\
+        sumA += el\
+    \}\
+    
+\f1\b for
+\f2\b0  el 
+\f1\b in
+\f2\b0  b \{\
+        sumB += el\
+    \}\
+
+\f1\b return
+\f2\b0  sumA > sumB\
+\}\
+\
+
+\f1\b var
+\f2\b0  a1 = [3, 5, 7, 1]\
+
+\f1\b var
+\f2\b0  b1 = [2, 1, 5, 1]\
+trueOrFalse(a: a1, b: b1)\
+\
+6. 
+\f1\b var
+\f2\b0  numbers: [Int] = [10, 4, 12, 1, 3]\
+numbers.sorted(by: <)\
+print(numbers)\
+\
+7.
+\f1\b var
+\f2\b0  votes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\
+\
+
+\f1\b func
+\f2\b0  average(numbers: Double...) -> Double \{\
+    
+\f1\b var
+\f2\b0  total = 0.0\
+    
+\f1\b for
+\f2\b0  vote 
+\f1\b in
+\f2\b0  votes \{\
+        total += Double(vote)\
+    \}\
+    
+\f1\b let
+\f2\b0  votesTotal = Double(votes.count)\
+    
+\f1\b let
+\f2\b0  average = total/votesTotal\
+    
+\f1\b return
+\f2\b0  average\
+\}\
+\
+average(numbers: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)\
+\
+8. 
+\f1\b func
+\f2\b0  findIndex(ofString valueToFind: String, in array: [String]) -> Int? \{\
+    
+\f1\b for
+\f2\b0  (index, value) 
+\f1\b in
+\f2\b0  array.enumerated() \{\
+        
+\f1\b if
+\f2\b0  value == valueToFind \{\
+            
+\f1\b return
+\f2\b0  index\
+        \}\
+    \}\
+    
+\f1\b return
+\f2\b0  
+\f1\b nil
+\f2\b0 \
+\}\
+
+\f1\b let
+\f2\b0  strings = ["cat", "dog", "llama", "parakeet", "terrapin"]\
+
+\f1\b if
+\f2\b0  
+\f1\b let
+\f2\b0  foundIndex = findIndex(ofString: "llama", in: strings) \{\
+    print("The index of llama is \\(foundIndex)")\
+\}\
+\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\fs28 \cf2 \expnd0\expndtw0\kerning0
+9. 
+\f3\fs24 \cb1 \kerning1\expnd0\expndtw0 Hello, young man/woman\
+\pard\pardeftab720\partightenfactor0
+\cf2 10.   4\
+11. \uc0\u1044 \u1072 , \u1044 \u1072 .\
+12. \uc0\u1058 \u1072 \u1084 , \u1075 \u1076 \u1077  
+\f2 \cb3 \expnd0\expndtw0\kerning0
+\uc0\u1087 \u1077 \u1088 \u1077 \u1084 \u1077 \u1085 \u1085 \u1072 \u1103  \u1089 \u1086 \u1076 \u1077 \u1088 \u1078 \u1080 \u1090  \u1079 \u1085 \u1072 \u1095 \u1077 \u1085 \u1080 \u1077 , \u1080  \u1074 \u1086 \u1089 \u1082 \u1083 \u1080 \u1094 \u1072 \u1090 \u1077 \u1083 \u1100 \u1085 \u1099 \u1081  \u1079 \u1085 \u1072 \u1082  \u1091 \u1082 \u1072 \u1079 \u1099 \u1074 \u1072 \u1077 \u1090  \u1085 \u1072  \u1101 \u1090 \u1086 .}
